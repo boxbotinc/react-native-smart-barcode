@@ -61,21 +61,29 @@ export default class Barcode extends Component {
     }
 
     startScan() {
-        BarcodeManager.startSession()
+        BarcodeManager.startSession();
     }
 
     stopScan() {
-        BarcodeManager.stopSession()
+        BarcodeManager.stopSession();
+    }
+
+    startFlash() {
+        BarcodeManager.startFlash();
+    }
+
+    stopFlash() {
+        BarcodeManager.stopFlash();
     }
 
     _handleAppStateChange = (currentAppState) => {
         if(currentAppState !== 'active' ) {
-            this.stopScan()
+            this.stopScan();
         }
         else {
-            this.startScan()
+            this.startScan();
         }
     }
 }
 
-const NativeBarCode = requireNativeComponent(Platform.OS == 'ios' ? 'RCTBarcode' : 'CaptureView', Barcode)
+const NativeBarCode = requireNativeComponent(Platform.OS == 'ios' ? 'RCTBarcode' : 'CaptureView', Barcode);
