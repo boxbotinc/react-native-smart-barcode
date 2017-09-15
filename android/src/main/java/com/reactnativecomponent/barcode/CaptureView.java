@@ -198,7 +198,7 @@ public class CaptureView extends FrameLayout implements TextureView.SurfaceTextu
             this.addView(this.viewfinderView);
         }
     }*/
-    
+
     /**
      * Activity onResume后调用view的onAttachedToWindow
      */
@@ -228,14 +228,14 @@ public class CaptureView extends FrameLayout implements TextureView.SurfaceTextu
         }
         this.addView(textureView);
         viewfinderView = new ViewfinderView(activity, scanTime, CORNER_COLOR);
-        viewfinderView.CORNER_WIDTH = CORNER_WIDTH;
-        viewfinderView.ShowText = Text;
-        viewfinderView.setLayoutParams(param);
-        viewfinderView.getLayoutParams().height = ScreenHeight;
-        viewfinderView.getLayoutParams().width = ScreenWidth;
-        viewfinderView.setBackgroundColor(getResources().getColor(R.color.transparent));
-        viewfinderView.setMIDDLE_LINE_WIDTH(this.MIDDLE_LINE_WIDTH);
-        this.addView(viewfinderView);
+        // viewfinderView.CORNER_WIDTH = CORNER_WIDTH;
+        // viewfinderView.ShowText = Text;
+        // viewfinderView.setLayoutParams(param);
+        // viewfinderView.getLayoutParams().height = ScreenHeight;
+        // viewfinderView.getLayoutParams().width = ScreenWidth;
+        // viewfinderView.setBackgroundColor(getResources().getColor(R.color.transparent));
+        // viewfinderView.setMIDDLE_LINE_WIDTH(this.MIDDLE_LINE_WIDTH);
+        // this.addView(viewfinderView);
 
         linearGradientView = new LinearGradientView(activity, activity);
         linearGradientView.setLayoutParams(param);
